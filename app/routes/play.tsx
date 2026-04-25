@@ -25,7 +25,6 @@ export default function Play() {
     navigate('/');
   };
 
-  // Auto-start on mount
   if (engine.gameState === 'menu') {
     engine.startGame();
   }
