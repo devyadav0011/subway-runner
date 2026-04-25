@@ -67,6 +67,12 @@ export interface GameEngineActions {
   slide: () => void;
 }
 
+const rafRequest = (cb: FrameRequestCallback): number =>
+  typeof window !== 'undefined' ? requestAnimationFrame(cb) : (setTimeout(cb, 16) as unknown as number);
+
+const rafCancel = (id: number): void =>
+  typeof window !== 'undefined' ? cancelAnimationFrame(id) : clearTimeout(id);
+
 export function useGameEngine(): GameEngineState & GameEngineActions {
   const [gameState, setGameState] = useState<GameState>('menu');
   const [playerLane, setPlayerLane] = useState<Lane>(1);
@@ -101,7 +107,7 @@ export function useGameEngine(): GameEngineState & GameEngineActions {
   }, []);
 
   const triggerGameOver = useCallback(() => {
-    cancelAnimationFrame(frameRef.current);
+    rafCancel(frameRef.current);
     gameStateRef.current = 'gameover';
     setGameState('gameover');
     setPlayerAction('dead');
@@ -187,7 +193,7 @@ export function useGameEngine(): GameEngineState & GameEngineActions {
     };
     if (fc % 10 === 0) setStats({ ...statsRef.current });
 
-    frameRef.current = requestAnimationFrame(gameLoop);
+    frameRef.current = rafRequest(gameLoop);
   }, [triggerGameOver]);
 
   const startCountdown = useCallback(() => {
@@ -202,7 +208,7 @@ export function useGameEngine(): GameEngineState & GameEngineActions {
         clearInterval(interval);
         gameStateRef.current = 'playing';
         setGameState('playing');
-        frameRef.current = requestAnimationFrame(gameLoop);
+        frameRef.current = rafRequest(gameLoop);
       }
     }, 1000);
   }, [gameLoop]);
@@ -214,7 +220,7 @@ export function useGameEngine(): GameEngineState & GameEngineActions {
 
   const pauseGame = useCallback(() => {
     if (gameStateRef.current !== 'playing') return;
-    cancelAnimationFrame(frameRef.current);
+    rafCancel(frameRef.current);
     gameStateRef.current = 'paused';
     setGameState('paused');
   }, []);
@@ -223,18 +229,18 @@ export function useGameEngine(): GameEngineState & GameEngineActions {
     if (gameStateRef.current !== 'paused') return;
     gameStateRef.current = 'playing';
     setGameState('playing');
-    frameRef.current = requestAnimationFrame(gameLoop);
+    frameRef.current = rafRequest(gameLoop);
   }, [gameLoop]);
 
   const quitToMenu = useCallback(() => {
-    cancelAnimationFrame(frameRef.current);
+    rafCancel(frameRef.current);
     gameStateRef.current = 'menu';
     setGameState('menu');
     resetState();
   }, [resetState]);
 
   const restartGame = useCallback(() => {
-    cancelAnimationFrame(frameRef.current);
+    rafCancel(frameRef.current);
     resetState();
     startCountdown();
   }, [resetState, startCountdown]);
@@ -302,7 +308,7 @@ export function useGameEngine(): GameEngineState & GameEngineActions {
   // cleanup on unmount
   useEffect(() => {
     return () => {
-      cancelAnimationFrame(frameRef.current);
+      rafCancel(frameRef.current);
       if (actionTimerRef.current) clearTimeout(actionTimerRef.current);
     };
   }, []);
