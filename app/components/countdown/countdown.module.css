@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(10, 10, 26, 0.6);
+  background: rgba(10, 2, 30, 0.55);
   backdrop-filter: blur(2px);
 }
 
@@ -18,31 +18,29 @@
 
 .number {
   font-family: var(--family-display);
-  font-size: 8rem;
-  font-weight: 700;
+  font-size: 9rem;
+  font-weight: 400;
   color: var(--color-primary);
   text-shadow:
-    0 0 40px var(--color-primary),
-    0 0 80px var(--color-primary-glow);
+    0 0 30px var(--color-primary),
+    0 0 60px var(--color-primary-glow),
+    0 4px 0 rgba(180, 120, 0, 0.8),
+    0 8px 0 rgba(100, 60, 0, 0.4);
   animation: popIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
   line-height: 1;
+  -webkit-text-stroke: 3px rgba(255, 180, 0, 0.5);
 }
 
 @keyframes popIn {
-  from {
-    transform: scale(2);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(2.2); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
 }
 
 .hint {
-  font-family: var(--family-mono);
+  font-family: var(--family-body);
   font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  letter-spacing: 3px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 4px;
   text-transform: uppercase;
 }
