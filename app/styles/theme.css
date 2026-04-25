@@ -1,30 +1,43 @@
 :root {
-  /* Colors */
-  --color-bg: #0a0a1a;
-  --color-bg-secondary: #0f0f2a;
-  --color-bg-card: #12122e;
-  --color-bg-overlay: rgba(10, 10, 26, 0.92);
-  --color-primary: #00f5ff;
-  --color-primary-glow: rgba(0, 245, 255, 0.3);
-  --color-secondary: #ff006e;
-  --color-secondary-glow: rgba(255, 0, 110, 0.3);
-  --color-accent: #7c3aed;
-  --color-accent-glow: rgba(124, 58, 237, 0.3);
-  --color-gold: #ffd700;
-  --color-gold-glow: rgba(255, 215, 0, 0.3);
-  --color-text: #e8e8ff;
-  --color-text-muted: #7a7a9a;
-  --color-text-dim: #4a4a6a;
-  --color-success: #00ff88;
-  --color-danger: #ff4455;
-  --color-border: rgba(0, 245, 255, 0.15);
-  --color-lane: rgba(0, 245, 255, 0.06);
-  --color-lane-divider: rgba(0, 245, 255, 0.2);
+  /* Subway Surfers-inspired vibrant palette */
+  --color-bg: #1a0533;
+  --color-bg-secondary: #220844;
+  --color-bg-card: #2a0c52;
+  --color-bg-overlay: rgba(20, 5, 40, 0.93);
+
+  --color-primary: #ffeb3b;
+  --color-primary-glow: rgba(255, 235, 59, 0.4);
+  --color-secondary: #ff4081;
+  --color-secondary-glow: rgba(255, 64, 129, 0.4);
+  --color-accent: #00e5ff;
+  --color-accent-glow: rgba(0, 229, 255, 0.35);
+  --color-green: #69f0ae;
+  --color-green-glow: rgba(105, 240, 174, 0.35);
+  --color-orange: #ff6d00;
+  --color-orange-glow: rgba(255, 109, 0, 0.4);
+  --color-gold: #ffd740;
+  --color-gold-glow: rgba(255, 215, 64, 0.4);
+
+  --color-text: #ffffff;
+  --color-text-muted: rgba(255, 255, 255, 0.6);
+  --color-text-dim: rgba(255, 255, 255, 0.3);
+
+  --color-success: #69f0ae;
+  --color-danger: #ff1744;
+  --color-border: rgba(255, 235, 59, 0.2);
+  --color-lane: rgba(255, 255, 255, 0.04);
+  --color-lane-divider: rgba(255, 255, 255, 0.25);
+
+  /* Track colors */
+  --color-track-surface: #2d2d5e;
+  --color-track-line: rgba(255, 255, 255, 0.3);
+  --color-sky-top: #0a0020;
+  --color-sky-mid: #1a0533;
 
   /* Font Families */
-  --family-display: 'Rajdhani', sans-serif;
-  --family-body: 'Exo 2', sans-serif;
-  --family-mono: 'Share Tech Mono', monospace;
+  --family-display: 'Boogaloo', sans-serif;
+  --family-body: 'Nunito', sans-serif;
+  --family-mono: 'Space Mono', monospace;
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -52,14 +65,14 @@
 
   /* Border radius */
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-primary: 0 0 20px var(--color-primary-glow);
-  --shadow-secondary: 0 0 20px var(--color-secondary-glow);
-  --shadow-gold: 0 0 20px var(--color-gold-glow);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-primary: 0 0 24px var(--color-primary-glow);
+  --shadow-secondary: 0 0 24px var(--color-secondary-glow);
+  --shadow-gold: 0 0 24px var(--color-gold-glow);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
