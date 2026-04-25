@@ -1,16 +1,24 @@
-import type { Route } from "./+types/home";
-import styles from "./home.module.css";
+import type { Route } from './+types/home';
+import { HeroSection } from '~/components/hero-section/hero-section';
+import { InstructionsSection } from '~/components/instructions-section/instructions-section';
+import { LeaderboardSection } from '~/components/leaderboard-section/leaderboard-section';
+import { SettingsPanel } from '~/components/settings-panel/settings-panel';
+import styles from './home.module.css';
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "Empty Template" },
-    {
-      name: "description",
-      content: "A welcoming empty template ready for content generation",
-    },
+    { title: 'Velocity Dash — Endless Runner' },
+    { name: 'description', content: 'Dodge. Collect. Survive. How far can you go?' },
   ];
 }
 
 export default function Home() {
-  return <main className={styles.home}>I'm an empty template.</main>;
+  return (
+    <main className={styles.home}>
+      <HeroSection />
+      <InstructionsSection />
+      <LeaderboardSection />
+      <SettingsPanel />
+    </main>
+  );
 }

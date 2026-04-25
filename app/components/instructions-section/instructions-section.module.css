@@ -1,0 +1,177 @@
+.section {
+  padding: var(--space-16) var(--space-6);
+  background: var(--color-bg-secondary);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.header {
+  text-align: center;
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 2px;
+  margin-bottom: var(--space-3);
+}
+
+.desc {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: var(--color-primary);
+}
+
+.icon {
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px var(--color-primary-glow);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.action {
+  font-family: var(--family-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.keys {
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+/* Obstacle guide */
+.obstacleGuide {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.guideTitle {
+  font-family: var(--family-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.obstacles {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (min-width: 600px) {
+  .obstacles {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.obstacleItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.obstacleItem strong {
+  display: block;
+  font-family: var(--family-display);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.obstacleItem p {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.hurdleDemo {
+  width: 40px;
+  height: 18px;
+  border: 3px solid var(--color-secondary);
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--color-secondary-glow);
+}
+
+.barrierDemo {
+  width: 30px;
+  height: 36px;
+  background: linear-gradient(180deg, var(--color-danger), rgba(255, 68, 85, 0.5));
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(255, 68, 85, 0.4);
+}
+
+.movingDemo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-gold), rgba(255, 215, 0, 0.4));
+  box-shadow: 0 0 10px var(--color-gold-glow);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.coinDemo {
+  font-size: 1.8rem;
+  color: var(--color-gold);
+  text-shadow: 0 0 10px var(--color-gold-glow);
+}

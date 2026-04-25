@@ -1,0 +1,35 @@
+.page {
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  background: var(--color-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gameWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  max-height: 700px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 245, 255, 0.1), 0 0 120px rgba(124, 58, 237, 0.08);
+}
+
+@media (max-width: 900px), (max-height: 700px) {
+  .page {
+    align-items: stretch;
+    justify-content: stretch;
+  }
+  
+  .gameWrapper {
+    max-width: unset;
+    max-height: unset;
+    border: none;
+    border-radius: 0;
+  }
+}

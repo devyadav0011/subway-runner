@@ -1,0 +1,63 @@
+.hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(to bottom, rgba(10, 10, 26, 0.9), transparent);
+  backdrop-filter: blur(4px);
+  gap: var(--space-4);
+}
+
+.statGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  min-width: 70px;
+}
+
+.label {
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  letter-spacing: 2px;
+}
+
+.value {
+  font-family: var(--family-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-primary);
+  text-shadow: 0 0 10px var(--color-primary-glow);
+  letter-spacing: 1px;
+}
+
+.coins {
+  color: var(--color-gold);
+  text-shadow: 0 0 10px var(--color-gold-glow);
+}
+
+.pauseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.pauseBtn:hover {
+  color: var(--color-primary);
+  background: rgba(0, 245, 255, 0.08);
+  border-color: var(--color-primary);
+}

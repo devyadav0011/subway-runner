@@ -1,0 +1,135 @@
+.section {
+  padding: var(--space-16) var(--space-6);
+  background: var(--color-bg);
+}
+
+.inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.trophyIcon {
+  color: var(--color-gold);
+  filter: drop-shadow(0 0 8px var(--color-gold-glow));
+}
+
+.title {
+  font-family: var(--family-display);
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  letter-spacing: 2px;
+}
+
+.tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 3px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex: 1;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-family: var(--family-body);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-muted);
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.tabActive {
+  background: rgba(0, 245, 255, 0.12);
+  color: var(--color-primary);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.empty {
+  padding: var(--space-10);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  background: var(--color-bg-card);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.entry {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: border-color 0.2s;
+}
+
+.entry:hover {
+  border-color: rgba(0, 245, 255, 0.3);
+}
+
+.topEntry {
+  border-color: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.04);
+}
+
+.rank {
+  font-family: var(--family-mono);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  min-width: 32px;
+  text-align: center;
+}
+
+.name {
+  flex: 1;
+  font-family: var(--family-display);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-text);
+  letter-spacing: 1px;
+}
+
+.entryStats {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.dist {
+  font-family: var(--family-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.score {
+  font-family: var(--family-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-primary);
+  min-width: 80px;
+  text-align: right;
+}
