@@ -26,5 +26,3 @@ You're never stuck — here's where to look:
 | 💰  | **[Pricing & Account](https://dazl.dev/pricing)**                               | Plans, credits, and what's included                               |
 
 ---
-
-**Built with [Dazl](https://dazl.dev)** · Empowering product teams to build better, faster.
