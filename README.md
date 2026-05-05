@@ -24,6 +24,6 @@ You're never stuck — here's where to look:
 | 🚀  | **[Getting Started](https://help.dazl.dev)**                                    | Onboarding, core guides, and everything to hit the ground running |
 | 🤖  | **[Working with the AI](https://help.dazl.dev/docs/building-with-dazl/design-and-refine/chat-driven-editing)** | Prompting, iterating, inspecting changes, and version management  |
 | 🛠️  | **[Using the Dev Tools](https://help.dazl.dev/docs/building-with-dazl/iterate-and-collaborate/inspecting-your-project)** | Elements, Console, and Code panels for precise debugging          |
-| 💰  | **[Pricing & Account](https://dazl.dev/pricing)**                               | Plans, credits, and what's included                               |
+| 💰  | **[Pricing & Account](https://dazl.dev/pricing)**                              | Plans, credits, and what's included                               |
 
 ---
