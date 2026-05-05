@@ -6,7 +6,7 @@ Your canvas for building beautiful, fast, and user-friendly web applications. Th
 
 Think of this as your complete toolkit for building modern web experiences. Everything you need is already set up and ready to go.
 
-- 🎨 **Beautiful UI Out of the Box** - A complete library of polished, accessible components that look great and work seamlessly together. Buttons, forms, dialogs, navigation—it's all here, styled and ready to use.
+- 🎨 **Beautiful UI Out of the Box** - A complete library of polished, accessible components that look great and work seamlessly together. Buttons, forms, dialogs, navigation—it's all here,styled and ready to use.
 
 - ⚡ **Lightning-Fast Performance** - Your users will love how snappy everything feels. Pages load instantly, interactions are smooth, and your app works great even on slower connections.
 
